@@ -2,5 +2,6 @@
 */*.old
 *.swp
 sdkconfig
+sdkconfig.old
 node_modules
 build
