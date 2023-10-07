@@ -2,6 +2,27 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const {MongoClient} = require("mongodb");
 const PgMem = require("pg-mem");
+const { Client } = require('pg');
+
+const connectionData = {
+    user: 'postgres',
+    host: 'localhost',
+    database: 'postgres',
+    password: 'postgres',
+    port: 5432,
+  }
+
+const client = new Client(connectionData)
+
+client.connect()
+client.query('SELECT * FROM devices')
+    .then(response => {
+        console.log(response.rows)
+        client.end()
+    })
+    .catch(err => {
+        client.end()
+    })
 
 const db = PgMem.newDb();
 
