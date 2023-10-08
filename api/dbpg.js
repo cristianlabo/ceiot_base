@@ -221,10 +221,10 @@ startDatabase().then(async() => {
     const addAdminEndpoint = require("./admin.js");
     addAdminEndpoint(app, render);
 
-    await insertMeasurement({id:'00', t:'18', h:'78',p:'0.971'});
-    await insertMeasurement({id:'00', t:'19', h:'77',p:'0.972'});
-    await insertMeasurement({id:'00', t:'17', h:'77',p:'0.974'});
-    await insertMeasurement({id:'01', t:'17', h:'77',p:'0.989'});
+    await insertMeasurement({id:'00', t:'18', h:'78',p:'93043.98'});
+    await insertMeasurement({id:'00', t:'19', h:'77',p:'93044.98'});
+    await insertMeasurement({id:'00', t:'17', h:'76',p:'93045.98'});
+    await insertMeasurement({id:'01', t:'17', h:'75',p:'93046.98'});
     console.log("mongo measurement database Up");
 
     

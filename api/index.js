@@ -2,31 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const {MongoClient} = require("mongodb");
  const PgMem = require("pg-mem");
-/* const { Client } = require('pg');
-
-const connectionData = {
-    user: 'postgres',
-    host: 'localhost',
-    database: 'postgres',
-    password: 'postgres',
-    port: 5432,
-  }
-
-const db = new Client(connectionData)
- */
-/* db.connect()
-db.query('SELECT * FROM devices')
-    .then(response => {
-        console.log(response.rows)
-        db.end()
-    })
-    .catch(err => {
-        db.end()
-    }) */
 
 const db = PgMem.newDb();
 
-//db.connect();
+
 
     const render = require("./render.js");
 // Measurements database setup and access
@@ -74,16 +53,14 @@ app.post('/device', function (req, res) {
 	console.log("device id    : " + req.body.id + " name        : " + req.body.n + " key         : " + req.body.k );
 
     db.public.none("INSERT INTO devices VALUES ('"+req.body.id+ "', '"+req.body.n+"', '"+req.body.k+"')");
-	//res.send("received new device");
-
-    //db.query("INSERT INTO devices VALUES ('"+req.body.id+ "', '"+req.body.n+"', '"+req.body.k+"')") ;
+	
 	res.send("received new device");
 });
 
 
 app.get('/web/device', function (req, res) {
 	var devices = db.public.many("SELECT * FROM devices").map( function(device) {
-    //var devices = db.many("SELECT * FROM devices").map( function(device) {
+    
 		console.log(device);
 		return '<tr><td><a href=/web/device/'+ device.device_id +'>' + device.device_id + "</a>" +
 			       "</td><td>"+ device.name+"</td><td>"+ device.key+"</td></tr>";
@@ -112,7 +89,7 @@ app.get('/web/device/:id', function (req,res) {
 
 
     var device = db.public.many("SELECT * FROM devices WHERE device_id = '"+req.params.id+"'");
-    //var device = db.query("SELECT * FROM devices WHERE device_id = $1 '",req.params.id);
+    
     console.log(device);
     res.send(render(template,{id:device[0].device_id, key: device[0].key, name:device[0].name}));
 });	
@@ -127,7 +104,7 @@ app.get('/term/device/:id', function (req, res) {
 		   "       id   " + green + "       {{ id }} " + reset +"\n" +
 	           "       key  " + blue  + "  {{ key }}" + reset +"\n";
     var device = db.public.many("SELECT * FROM devices WHERE device_id = '"+req.params.id+"'");
-    //var device = db.query("SELECT * FROM devices WHERE device_id = $1 '",req.params.id);
+    
     console.log(device);
     res.send(render(template,{id:device[0].device_id, key: device[0].key, name:device[0].name}));
 });
@@ -138,7 +115,7 @@ app.get('/measurement', async (req,res) => {
 
 app.get('/device', function(req,res) {
     res.send( db.public.many("SELECT * FROM devices") );
-    //res.send( db.query("SELECT * FROM devices") );
+  
 });
 
 startDatabase().then(async() => {
@@ -147,10 +124,10 @@ startDatabase().then(async() => {
     const addAdminEndpoint = require("./admin.js");
     addAdminEndpoint(app, render);
 
-    await insertMeasurement({id:'00', t:'18', h:'78',p:'0.971'});
-    await insertMeasurement({id:'00', t:'19', h:'77',p:'0.972'});
-    await insertMeasurement({id:'00', t:'17', h:'77',p:'0.974'});
-    await insertMeasurement({id:'01', t:'17', h:'77',p:'0.989'});
+    await insertMeasurement({id:'00', t:'18', h:'78',p:'93043.98'});
+    await insertMeasurement({id:'00', t:'19', h:'77',p:'93044.98'});
+    await insertMeasurement({id:'00', t:'17', h:'76',p:'93045.98'});
+    await insertMeasurement({id:'01', t:'17', h:'75',p:'93046.98'});
     console.log("mongo measurement database Up");
 
     db.public.none("CREATE TABLE devices (device_id VARCHAR, name VARCHAR, key VARCHAR)");
@@ -160,16 +137,6 @@ startDatabase().then(async() => {
     db.public.none("INSERT INTO users VALUES ('1','Ana','admin123')");
     db.public.none("INSERT INTO users VALUES ('2','Beto','user123')"); 
 
- /*    db.query("drop table devices");
-    db.query("drop table users");
-
-
-    db.query("CREATE TABLE devices (device_id VARCHAR, name VARCHAR, key VARCHAR)");
-    db.query("INSERT INTO devices VALUES ('00', 'Fake Device 00', '123456')");
-    db.query("INSERT INTO devices VALUES ('01', 'Fake Device 01', '234567')");
-    db.query("CREATE TABLE users (user_id VARCHAR, name VARCHAR, key VARCHAR)");
-    db.query("INSERT INTO users VALUES ('1','Ana','admin123')");
-    db.query("INSERT INTO users VALUES ('2','Beto','user123')"); */
 
     console.log("sql device database up");
 
