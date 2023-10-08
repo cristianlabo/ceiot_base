@@ -2,15 +2,20 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const {MongoClient} = require("mongodb");
 const { Client } = require('pg');
+require('dotenv').config();
+
+
 
 const connectionData = {
-    user: 'postgres',
-    host: 'localhost',
-    database: 'postgres',
-    password: 'postgres',
-    port: 5432,
-  }
+    host: process.env.PG_HOST,
+    port: process.env.PG_PORT,
+    user: process.env.PG_USER,
+    password: process.env.PG_PASSWORD,
+    database: process.env.PG_DATABASE,
+    ssl: false,
+}
 
+  
   db = new Client(connectionData)
   db.connect();
 
@@ -142,7 +147,6 @@ app.get('/term/device/:id', async function (req, res) {
 		   "       id   " + green + "       {{ id }} " + reset +"\n" +
 	           "       key  " + blue  + "  {{ key }}" + reset +"\n";
 
-
     db = new Client(connectionData)
     db.connect();
     await db.query("SELECT * FROM devices WHERE device_id = $1 ",[req.params.id])
@@ -190,9 +194,9 @@ app.get('/web/measurement', async (req,res) => {
 
 
 async function get_consultas(consulta,res) {
-   
-   db = new Client(connectionData)
-        db.connect();
+
+   db = new Client(connectionData) 
+   db.connect();
         await  db.query(consulta)
         .then(response => {
             console.log(response.rows)
@@ -226,8 +230,6 @@ startDatabase().then(async() => {
     
     await db.query("drop table if exists devices");
     await db.query("drop table if exists users");
-
-
     await db.query("CREATE TABLE devices (device_id VARCHAR, name VARCHAR, key VARCHAR)");
     await db.query("INSERT INTO devices VALUES ('00', 'Fake Device 00', '123456')");
     await db.query("INSERT INTO devices VALUES ('01', 'Fake Device 01', '234567')");
