@@ -1,3 +1,3 @@
-wget -O output.txt "http://localhost:8080/measurement"
-echo >> output.txt
-cat output.txt
+wget -O measurements.json "http://localhost:8080/measurement"
+cat measurements.json
+echo
