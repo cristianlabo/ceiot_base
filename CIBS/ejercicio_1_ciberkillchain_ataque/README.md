@@ -3,9 +3,9 @@
 Crear un nuevo documento en esta carpeta con las siguientes secciones:
 
  * Cristian Garcia
- * Medidor de potencia electrica.Se trata de una red de sensores que miden potencia electrica,transmiten los datos por wifi a un broker mqtt a la nube.
- En la nube se alojan el backend y frontend de la aplicacion web a la cual se conectan los usuarios.
- Desde la aplicacion se pueden setear alarmas de consumo, monitorear la potencia consumida y controlar los horarios de cortes de suministro electrico.
+ * Medidor de potencia electrica. Se trata de una red de sensores que miden potencia electrica,transmiten los datos por wifi a un broker mqtt a la nube.
+ En la nube se alojan el backend y frontend de la aplicacion web que se conectan los usuarios.
+ Desde la aplicacion se pueden setear alarmas de consumo, monitorear la potencia consumida y visualizar los horarios de cortes de suministro electrico.
  * Resolución
 
 
@@ -13,6 +13,36 @@ Crear un nuevo documento en esta carpeta con las siguientes secciones:
 ## Enunciado
 
 Armar una cyberkillchain usando técnicas de la matriz de Att&ck para un escenario relacionado al trabajo práctico de la carrera.
+
+
+
+### Ataque: estafa por exceso de consumo electrico
+
+Objetivo del ataque: Obtener información de usuarios, estafarlos por medio de cobros falsos por excesos de consumo electrico.
+
+* Reconnaissance
+  - Identificar ip publica del sistema en cuestion.
+
+* Weaponization
+  - **Puedo** preparar un acceso a la pagina web aprovechando una vulnerabilidad 0-day.
+  
+* Delivery
+  - Envío el malware para tomar el control de la pagina web.
+  
+* Exploit
+  - Logro tomar control de la pagina web de manera remota aprovechando la vulnerabilidad 0-day.
+  
+* Installation  
+  - Preparo un backdoor para tener una comunicacion abierta entre la pagina web y mi equipo.
+
+* Command & Control
+  - **Puedo** obtener credenciales e informacion de los usuarios.
+  
+* Actions on Objectives
+  - Modifico los consumos de los usuarios para que visualicen un consumo excesivo en un determinado periodo de tiempo.
+  - Envio alartes de consumo para que el usuario este informado.
+  - Envio mails falsos a los usuarios para el pago del exceso de cosnumo en una cuenta falsa.
+
 
 ### Instrucciones
 
