@@ -2,8 +2,8 @@
 
 Crear un nuevo documento en esta carpeta con las siguientes secciones:
 
- * Alumno
- * Muy breve descripción del trabajo práctico con link si hay
+ * Cristian Garcia
+ * Medidor de potencia electrica.Se trata de una red de sensores que miden potencia electrica transmiten los datos por wifi a un modulo central, conectados a broker mqtt, que se conecta a la nube donde se alojan el backend y frontend de la aplicacion web que consumen los usuarios.Los usuarios pueden setear alarmas de consumo, monitoreo de potencia consumida y horarios de cortes de suministro electrico.
  * Resolución
 
 
