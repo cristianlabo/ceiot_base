@@ -30,7 +30,7 @@ Objetivo del ataque: Estafar a los usuarios por medio de cobros falsos por exces
   
   
 * Delivery
-  - Envío el backdoor para tomar el control de la pagina web mediante phising.
+  - Envío el backdoor para tomar el control de la pagina web mediante phishing.
   
 * Exploit
   - Logro tomar control de la pagina web de manera remota aprovechando la vulnerabilidad 0-day.
@@ -42,9 +42,9 @@ Objetivo del ataque: Estafar a los usuarios por medio de cobros falsos por exces
   - Obtengo las credenciales e informacion de los usuarios.
   
 * Actions on Objectives
-  - Modifico los consumos de los usuarios para que visualicen un consumo excesivo en un determinado periodo de tiempo.
+  - Modifico los consumos para que los usuarios visualicen un consumo excesivo en un determinado periodo de tiempo.
   - Envio alartes de consumo para que el usuario este informado.
-  - Envio mails falsos a los usuarios para el pago del exceso de cosnumo en una cuenta falsa.
+  - Envio mails falsos a los usuarios para el pago del exceso de cosnumo en una cuenta bancaria falsa.
 
 
 ### Instrucciones
