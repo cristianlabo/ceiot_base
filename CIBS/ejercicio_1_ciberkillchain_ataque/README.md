@@ -6,7 +6,7 @@ Crear un nuevo documento en esta carpeta con las siguientes secciones:
  * Medidor de potencia electrica. Se trata de una red de sensores que miden potencia electrica,transmiten los datos por wifi a un broker mqtt a la nube.
  En la nube se alojan el backend y frontend de la aplicacion web que se conectan los usuarios.
  Desde la aplicacion se pueden setear alarmas de consumo, monitorear la potencia consumida y visualizar los horarios de cortes de suministro electrico.
- * Resolución
+ * Los usuarios estan expuestos a la modificacion de consumos electricos, envio de falsas alertas y cobro de pagos falsos por los atacantes.
 
 
 
@@ -18,25 +18,28 @@ Armar una cyberkillchain usando técnicas de la matriz de Att&ck para un escenar
 
 ### Ataque: estafa por exceso de consumo electrico
 
-Objetivo del ataque: Obtener información de usuarios, estafarlos por medio de cobros falsos por excesos de consumo electrico.
+Objetivo del ataque: Estafar a los usuarios por medio de cobros falsos por excesos de consumo electrico.
 
 * Reconnaissance
-  - Identificar ip publica del sistema en cuestion.
+  - Identificar ip publica del sistema .
+  - Identificar vulnerabilidades del sistema.
 
 * Weaponization
   - **Puedo** preparar un acceso a la pagina web aprovechando una vulnerabilidad 0-day.
+  - Preparar un backdoor para tener comunicarcion abierta entre la pagina web y el equipo.
+  
   
 * Delivery
-  - Envío el malware para tomar el control de la pagina web.
+  - Envío el backdoor para tomar el control de la pagina web mediante phising.
   
 * Exploit
   - Logro tomar control de la pagina web de manera remota aprovechando la vulnerabilidad 0-day.
   
 * Installation  
-  - Preparo un backdoor para tener una comunicacion abierta entre la pagina web y mi equipo.
+  - Se instalan los programas necesarios para tener una comunicacion abierta entre la pagina web y mi equipo.
 
 * Command & Control
-  - **Puedo** obtener credenciales e informacion de los usuarios.
+  - Obtengo las credenciales e informacion de los usuarios.
   
 * Actions on Objectives
   - Modifico los consumos de los usuarios para que visualicen un consumo excesivo en un determinado periodo de tiempo.
