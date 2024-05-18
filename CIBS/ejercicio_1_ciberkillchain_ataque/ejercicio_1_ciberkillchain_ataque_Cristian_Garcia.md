@@ -41,13 +41,13 @@ Objetivo del ataque: Estafar a los usuarios por medio de cobros falsos por exces
   - Creacion de cuentas falsa para mantener el acceso al sistema y sus recursos.https://attack.mitre.org/techniques/T1136/
 
 * Commando y control (C2)
- - Escalada de privilegios mediante manipulacion de cuentas. https://attack.mitre.org/techniques/T1098/
- - Evasion de defensas mediante el deterioro de las defensas https://attack.mitre.org/techniques/T1562/  y la modificacion de infrastructura en la nube https://attack.mitre.org/techniques/T1578/.
- - Acceso a credenciales mediante Credenciales de almacenes de contraseñas. https://attack.mitre.org/techniques/T1555/
- - Descubrimiento de recursos en la nube mediante Descubrimiento de cuenta https://attack.mitre.org/techniques/T1087/ , Descubrimiento de la ventana de la aplicación https://attack.mitre.org/techniques/T1010/ , Descubrimiento de servicios en la nube https://attack.mitre.org/techniques/T1526/ y Descubrimiento de objetos de almacenamiento en la nube https://attack.mitre.org/techniques/T1619/.
- - Movimiento lateral mediante Servicios remotos. https://attack.mitre.org/techniques/T1021/
- - Recompilacion mediante Colección de correo electrónico. https://attack.mitre.org/techniques/T1114/
- - comando y control mediante un canal cifrado. https://attack.mitre.org/techniques/T1573/
+  - Escalada de privilegios mediante manipulacion de cuentas. https://attack.mitre.org/techniques/T1098/
+  - Evasion de defensas mediante el deterioro de las defensas https://attack.mitre.org/techniques/T1562/  y la modificacion de infrastructura en la nube https://attack.mitre.org/techniques/T1578/.
+  - Acceso a credenciales mediante Credenciales de almacenes de contraseñas. https://attack.mitre.org/techniques/T1555/
+  - Descubrimiento de recursos en la nube mediante Descubrimiento de cuenta https://attack.mitre.org/techniques/T1087/ , Descubrimiento de la ventana de la aplicación https://attack.mitre.org/techniques/T1010/ , Descubrimiento de servicios en la nube https://attack.mitre.org/techniques/T1526/ y Descubrimiento de objetos de almacenamiento en la nube https://attack.mitre.org/techniques/T1619/.
+  - Movimiento lateral mediante Servicios remotos. https://attack.mitre.org/techniques/T1021/
+  - Recompilacion mediante Colección de correo electrónico. https://attack.mitre.org/techniques/T1114/
+  - comando y control mediante un canal cifrado. https://attack.mitre.org/techniques/T1573/
 
   
 * Accciones en los objetivos
