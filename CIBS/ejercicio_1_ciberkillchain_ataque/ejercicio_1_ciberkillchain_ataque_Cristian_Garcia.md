@@ -31,10 +31,10 @@ Objetivo del ataque: Estafar a los usuarios por medio de cobros falsos por exces
 * Armamento
   
   - Obtener cuentas comprometidas. https://attack.mitre.org/techniques/T1586/
-    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+    - Utilizando las siguientes subtecnicas: Cuentas de correo electrónico(https://attack.mitre.org/techniques/T1586/002/).
 
-  - Preparar un backdoor para tener comunicarcion abierta entre la pagina web y el equipo.https://attack.mitre.org/techniques/T1588/
-    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+  - Preparar un backdoor para tener comunicarcion abierta entre la pagina web y el equipo. https://attack.mitre.org/techniques/T1588/
+    - Utilizando las siguientes subtecnicas: Malware (https://attack.mitre.org/techniques/T1588/001/).
   
 * Envio
   - Envío el backdoor para tomar el control de la pagina web mediante phishing.https://attack.mitre.org/techniques/T1566/
