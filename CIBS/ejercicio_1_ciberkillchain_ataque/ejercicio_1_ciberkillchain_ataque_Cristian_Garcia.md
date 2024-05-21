@@ -1,10 +1,8 @@
 # Ejercicio CiberKillChain - Ataque
 
-Crear un nuevo documento en esta carpeta con las siguientes secciones:
-
  * Cristian Garcia
  * Medidor de potencia electrica. Se trata de una red de sensores que miden potencia electrica,transmiten los datos por wifi a un broker mqtt a la nube.
- En la nube se alojan el backend y frontend de la aplicacion web que se conectan los usuarios.
+ En la nube se alojan el backend y frontend de la aplicacion web con la cual se conectan los usuarios.
  Desde la aplicacion se pueden setear alarmas de consumo, monitorear la potencia consumida y visualizar los horarios de cortes de suministro electrico.
  https://github.com/cristianlabo/Plantilla-planificacion/blob/master/charter.pdf 
  * Los usuarios estan expuestos a la modificacion de consumos electricos, envio de alertas falsas y cobro de pagos falsos por los atacantes.
@@ -15,17 +13,18 @@ Crear un nuevo documento en esta carpeta con las siguientes secciones:
 
 Armar una cyberkillchain usando técnicas de la matriz de Att&ck para un escenario relacionado al trabajo práctico de la carrera.
 
-
-
 ### Ataque: estafa por exceso de consumo electrico
 
 Objetivo del ataque: Estafar a los usuarios por medio de cobros falsos por excesos de consumo electrico.
 
 * Reconocimiento
-  - Identificar ip de la API, vulnerabilidad del sistema mediante el escaneo activo. https://attack.mitre.org/techniques/T1595/
+  - Identificar ip de la API, vulnerabilidades del sistema mediante el escaneo activo. https://attack.mitre.org/techniques/T1595/
+     - Utilizando las siguientes subtecnicas: Bloqueos IP de escaneo(https://attack.mitre.org/techniques/T1595/001/),Escaneo de vulnerabilidad(https://attack.mitre.org/techniques/T1595/002/)
   - Reunir informacion sobre las victimas. https://attack.mitre.org/techniques/T1589/
+     - Utilizando las siguientes subtecnicas: Credenciales(https://attack.mitre.org/techniques/T1589/001/),Direcciones de correo electrónico(https://attack.mitre.org/techniques/T1589/002/)
   - Utilizar phising para obtener informacion personal. https://attack.mitre.org/techniques/T1598/
-
+     - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+       
 * Armamento
   - Obtener cuentas comprometidas. https://attack.mitre.org/techniques/T1586/
   - Preparar un backdoor para tener comunicarcion abierta entre la pagina web y el equipo.https://attack.mitre.org/techniques/T1588/ 
