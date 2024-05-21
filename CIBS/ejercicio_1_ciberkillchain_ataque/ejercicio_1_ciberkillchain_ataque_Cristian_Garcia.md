@@ -18,42 +18,79 @@ Armar una cyberkillchain usando técnicas de la matriz de Att&ck para un escenar
 Objetivo del ataque: Estafar a los usuarios por medio de cobros falsos por excesos de consumo electrico.
 
 * Reconocimiento
+  
   - Identificar ip de la API, vulnerabilidades del sistema mediante el escaneo activo. https://attack.mitre.org/techniques/T1595/
-     - Utilizando las siguientes subtecnicas: Bloqueos IP de escaneo(https://attack.mitre.org/techniques/T1595/001/),Escaneo de vulnerabilidad(https://attack.mitre.org/techniques/T1595/002/)
+     - Utilizando las siguientes subtecnicas: Bloqueos IP de escaneo(https://attack.mitre.org/techniques/T1595/001/), Escaneo de vulnerabilidad(https://attack.mitre.org/techniques/T1595/002/)
+
   - Reunir informacion sobre las victimas. https://attack.mitre.org/techniques/T1589/
-     - Utilizando las siguientes subtecnicas: Credenciales(https://attack.mitre.org/techniques/T1589/001/),Direcciones de correo electrónico(https://attack.mitre.org/techniques/T1589/002/)
+     - Utilizando las siguientes subtecnicas: Credenciales(https://attack.mitre.org/techniques/T1589/001/), Direcciones de correo electrónico(https://attack.mitre.org/techniques/T1589/002/)
+
   - Utilizar phising para obtener informacion personal. https://attack.mitre.org/techniques/T1598/
      - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
        
 * Armamento
+  
   - Obtener cuentas comprometidas. https://attack.mitre.org/techniques/T1586/
-  - Preparar un backdoor para tener comunicarcion abierta entre la pagina web y el equipo.https://attack.mitre.org/techniques/T1588/ 
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+
+  - Preparar un backdoor para tener comunicarcion abierta entre la pagina web y el equipo.https://attack.mitre.org/techniques/T1588/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
   
 * Envio
   - Envío el backdoor para tomar el control de la pagina web mediante phishing.https://attack.mitre.org/techniques/T1566/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
   
 * Explotacion
-  - Logro tomar control de la pagina web de manera remota aprovechando la ejecucion de usuario. https://attack.mitre.org/techniques/T1204/
   
-* Instalacion  
+  - Logro tomar control de la pagina web de manera remota aprovechando la ejecucion de usuario. https://attack.mitre.org/techniques/T1204/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+  
+* Instalacion
+   
   - Se instala una imagen interna en la infraestructura. https://attack.mitre.org/techniques/T1525/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+
   - Creacion de cuentas falsa para mantener el acceso al sistema y sus recursos.https://attack.mitre.org/techniques/T1136/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+    
 
 * Commando y control (C2)
+  
   - Escalada de privilegios mediante manipulacion de cuentas. https://attack.mitre.org/techniques/T1098/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+      
   - Evasion de defensas mediante el deterioro de las defensas https://attack.mitre.org/techniques/T1562/  y la modificacion de infrastructura en la nube https://attack.mitre.org/techniques/T1578/.
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+
   - Acceso a credenciales mediante Credenciales de almacenes de contraseñas. https://attack.mitre.org/techniques/T1555/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+
   - Descubrimiento de recursos en la nube mediante Descubrimiento de cuenta https://attack.mitre.org/techniques/T1087/ , Descubrimiento de la ventana de la aplicación https://attack.mitre.org/techniques/T1010/ , Descubrimiento de servicios en la nube https://attack.mitre.org/techniques/T1526/ y Descubrimiento de objetos de almacenamiento en la nube https://attack.mitre.org/techniques/T1619/.
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+
   - Movimiento lateral mediante Servicios remotos. https://attack.mitre.org/techniques/T1021/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+
   - Recompilacion mediante Colección de correo electrónico. https://attack.mitre.org/techniques/T1114/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+
   - comando y control mediante un canal cifrado. https://attack.mitre.org/techniques/T1573/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
 
   
 * Accciones en los objetivos
-  - Exfiltracion de datos de usuarios mediante Exfiltración sobre el canal C2. https://attack.mitre.org/techniques/T1041/ 
+  
+  - Exfiltracion de datos de usuarios mediante Exfiltración sobre el canal C2. https://attack.mitre.org/techniques/T1041/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+
   - Modifico los consumos para que los usuarios visualicen un consumo excesivo en un determinado periodo de tiempo mediante manipulacion de dato. https://attack.mitre.org/techniques/T1565/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+
   - Envio alartes de consumo para que el usuario este informado. https://attack.mitre.org/techniques/T1565/
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
+
   - Envio mails falsos a los usuarios para el pago del exceso de cosnumo en una cuenta bancaria falsa con los datos obtenidos de la exfiltracion.
+    - Utilizando las siguientes subtecnicas: Servicio de Spearphishing(https://attack.mitre.org/techniques/T1598/001/).
 
 
   
