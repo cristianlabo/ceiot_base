@@ -84,7 +84,7 @@ Objetivo del ataque: Estafar a los usuarios por medio de cobros falsos por exces
   - Modifico los consumos para que los usuarios visualicen un consumo excesivo en un determinado periodo de tiempo y envio de alartes de consumo pmediante manipulacion de datos. https://attack.mitre.org/techniques/T1565/
     - Utilizando las siguientes subtecnicas: manipulación de datos almacenados(https://attack.mitre.org/techniques/T1565/001/).
 
-  - Envio mails falsos a los usuarios para el pago del exceso de cosnumo en una cuenta bancaria falsa con los datos obtenidos de la exfiltracion mediante Robo financiero https://attack.mitre.org/techniques/T1657/
+  - Envio mails falsos a los usuarios para pago de los consumos en una cuenta bancaria falsa mediante Robo financiero https://attack.mitre.org/techniques/T1657/
 
   
 
