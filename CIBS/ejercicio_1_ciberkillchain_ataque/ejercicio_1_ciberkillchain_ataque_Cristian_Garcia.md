@@ -25,7 +25,7 @@ Objetivo del ataque: Estafar a los usuarios por medio de cobros falsos por exces
        
 * Armamento
   
-  - Preparo un malware para tener comunicacion abierta entre la pagina web y mi equipo. Por otro lado preparo una imagen para mantener la persistencia en la infraestructura cloud. En ambos casos aplico la subtecnica "Malware" (https://attack.mitre.org/techniques/T1588/001/).
+  - Preparo un malware para tener comunicacion abierta entre la pagina web y mi equipo. Por otro lado preparo una imagen personalizada para mantener la persistencia en la infraestructura cloud. En ambos casos aplico la subtecnica "Malware" (https://attack.mitre.org/techniques/T1588/001/).
   
 * Envio
   - Envío el malware para tomar el control de la pagina web mediante phishing con un archivo adjunto(malware) utilizando la subtecnica "archivo adjunto de phishing"(https://attack.mitre.org/techniques/T1566/001/).
